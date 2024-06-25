@@ -6,27 +6,24 @@ Public Class frmProdutos
         txtValor.Text = ""
         btnExcluir.Visible = False
     End Sub
-
     Private Sub CarregarProdutos()
-        Dim tbProdutos As ADODB.Recordset, x As Integer, sql As String
+        Dim dtProdutos As DataTable, x As Integer, sql As String
         LimparProduto()
         lstProdutos.Items.Clear()
         sql = "select * from tbprodutos where nome like '%" & txtProduto.Text & "%'"
         If IsNumeric(txtProduto.Text) Then
             sql = "select * from tbprodutos where codP = " & txtProduto.Text
         End If
-        tbProdutos = RecebeTabela(sql)
-        If tbProdutos.RecordCount > 0 Then
-            tbProdutos.MoveFirst()
-            Do Until tbProdutos.EOF
-                lstProdutos.Items.Add(tbProdutos("codP").Value)
-                lstProdutos.Items(x).SubItems.Add(tbProdutos("nome").Value.ToString)
-                lstProdutos.Items(x).SubItems.Add(Format(tbProdutos("valor").Value, "0.00"))
+        dtProdutos = RecebeTabela(sql, tpServidor.SqlServer)
+        If dtProdutos IsNot Nothing AndAlso dtProdutos.Rows.Count > 0 Then
+            For Each row As DataRow In dtProdutos.Rows
+                Dim item As New ListViewItem(row("codP").ToString())
+                item.SubItems.Add(row("nome").ToString())
+                item.SubItems.Add(Format(row("valor"), "0.00"))
+                lstProdutos.Items.Add(item)
                 x += 1
-                tbProdutos.MoveNext()
-            Loop
+            Next
         End If
-
     End Sub
 
     Private Sub btnsalvar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSalvar.Click
@@ -53,7 +50,7 @@ Public Class frmProdutos
     End Sub
 
     Private Sub frmProdutos_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        CarregarProdutos()
+        'CarregarProdutos()
     End Sub
 
     Private Sub lstProdutos_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lstProdutos.SelectedIndexChanged
