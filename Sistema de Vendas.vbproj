@@ -7,8 +7,8 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{04EEC9E9-2693-49A1-B647-294C8F000D31}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>WindowsApplication1.My.MyApplication</StartupObject>
-    <RootNamespace>WindowsApplication1</RootNamespace>
+    <StartupObject>SistemaVendas.My.MyApplication</StartupObject>
+    <RootNamespace>SistemaVendas</RootNamespace>
     <AssemblyName>Sistema de Vendas</AssemblyName>
     <MyType>WindowsForms</MyType>
     <FileUpgradeFlags>

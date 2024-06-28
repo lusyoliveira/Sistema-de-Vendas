@@ -19,21 +19,21 @@ Partial Class frmProdutos
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.grpProdutos = New System.Windows.Forms.GroupBox
-        Me.Label3 = New System.Windows.Forms.Label
-        Me.Label2 = New System.Windows.Forms.Label
-        Me.txtValor = New System.Windows.Forms.TextBox
-        Me.txtNome = New System.Windows.Forms.TextBox
-        Me.btnExcluir = New System.Windows.Forms.Button
-        Me.btnSalvar = New System.Windows.Forms.Button
-        Me.btnProcurar = New System.Windows.Forms.Button
-        Me.btnNovo = New System.Windows.Forms.Button
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.txtProduto = New System.Windows.Forms.TextBox
-        Me.lstProdutos = New System.Windows.Forms.ListView
-        Me.clmCod = New System.Windows.Forms.ColumnHeader
-        Me.clmNome = New System.Windows.Forms.ColumnHeader
-        Me.clmValor = New System.Windows.Forms.ColumnHeader
+        Me.grpProdutos = New System.Windows.Forms.GroupBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.txtValor = New System.Windows.Forms.TextBox()
+        Me.txtNome = New System.Windows.Forms.TextBox()
+        Me.btnExcluir = New System.Windows.Forms.Button()
+        Me.btnSalvar = New System.Windows.Forms.Button()
+        Me.btnProcurar = New System.Windows.Forms.Button()
+        Me.btnNovo = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.txtProduto = New System.Windows.Forms.TextBox()
+        Me.lstProdutos = New System.Windows.Forms.ListView()
+        Me.clmCod = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.clmNome = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.clmValor = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.grpProdutos.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -46,9 +46,11 @@ Partial Class frmProdutos
         Me.grpProdutos.Controls.Add(Me.btnExcluir)
         Me.grpProdutos.Controls.Add(Me.btnSalvar)
         Me.grpProdutos.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.grpProdutos.Location = New System.Drawing.Point(29, 380)
+        Me.grpProdutos.Location = New System.Drawing.Point(39, 468)
+        Me.grpProdutos.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.grpProdutos.Name = "grpProdutos"
-        Me.grpProdutos.Size = New System.Drawing.Size(513, 131)
+        Me.grpProdutos.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.grpProdutos.Size = New System.Drawing.Size(684, 161)
         Me.grpProdutos.TabIndex = 0
         Me.grpProdutos.TabStop = False
         Me.grpProdutos.Tag = "0"
@@ -57,40 +59,45 @@ Partial Class frmProdutos
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(325, 38)
+        Me.Label3.Location = New System.Drawing.Point(433, 47)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(47, 18)
+        Me.Label3.Size = New System.Drawing.Size(59, 24)
         Me.Label3.TabIndex = 6
         Me.Label3.Text = "Valor"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(9, 38)
+        Me.Label2.Location = New System.Drawing.Point(12, 47)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(53, 18)
+        Me.Label2.Size = New System.Drawing.Size(66, 24)
         Me.Label2.TabIndex = 5
         Me.Label2.Text = "Nome"
         '
         'txtValor
         '
-        Me.txtValor.Location = New System.Drawing.Point(378, 34)
+        Me.txtValor.Location = New System.Drawing.Point(504, 42)
+        Me.txtValor.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtValor.Name = "txtValor"
-        Me.txtValor.Size = New System.Drawing.Size(119, 24)
+        Me.txtValor.Size = New System.Drawing.Size(157, 29)
         Me.txtValor.TabIndex = 4
         '
         'txtNome
         '
-        Me.txtNome.Location = New System.Drawing.Point(68, 35)
+        Me.txtNome.Location = New System.Drawing.Point(91, 43)
+        Me.txtNome.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtNome.Name = "txtNome"
-        Me.txtNome.Size = New System.Drawing.Size(248, 24)
+        Me.txtNome.Size = New System.Drawing.Size(329, 29)
         Me.txtNome.TabIndex = 3
         '
         'btnExcluir
         '
-        Me.btnExcluir.Location = New System.Drawing.Point(269, 75)
+        Me.btnExcluir.Location = New System.Drawing.Point(359, 92)
+        Me.btnExcluir.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnExcluir.Name = "btnExcluir"
-        Me.btnExcluir.Size = New System.Drawing.Size(130, 31)
+        Me.btnExcluir.Size = New System.Drawing.Size(173, 38)
         Me.btnExcluir.TabIndex = 2
         Me.btnExcluir.Text = "Excluir"
         Me.btnExcluir.UseVisualStyleBackColor = True
@@ -98,9 +105,10 @@ Partial Class frmProdutos
         '
         'btnSalvar
         '
-        Me.btnSalvar.Location = New System.Drawing.Point(111, 75)
+        Me.btnSalvar.Location = New System.Drawing.Point(148, 92)
+        Me.btnSalvar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnSalvar.Name = "btnSalvar"
-        Me.btnSalvar.Size = New System.Drawing.Size(130, 32)
+        Me.btnSalvar.Size = New System.Drawing.Size(173, 39)
         Me.btnSalvar.TabIndex = 0
         Me.btnSalvar.Text = "Salvar"
         Me.btnSalvar.UseVisualStyleBackColor = True
@@ -109,9 +117,10 @@ Partial Class frmProdutos
         '
         Me.btnProcurar.AccessibleName = "Procurar"
         Me.btnProcurar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnProcurar.Location = New System.Drawing.Point(276, 19)
+        Me.btnProcurar.Location = New System.Drawing.Point(368, 23)
+        Me.btnProcurar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnProcurar.Name = "btnProcurar"
-        Me.btnProcurar.Size = New System.Drawing.Size(130, 27)
+        Me.btnProcurar.Size = New System.Drawing.Size(173, 33)
         Me.btnProcurar.TabIndex = 1
         Me.btnProcurar.Tag = ""
         Me.btnProcurar.Text = "Procurar"
@@ -120,9 +129,10 @@ Partial Class frmProdutos
         'btnNovo
         '
         Me.btnNovo.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnNovo.Location = New System.Drawing.Point(412, 19)
+        Me.btnNovo.Location = New System.Drawing.Point(549, 23)
+        Me.btnNovo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnNovo.Name = "btnNovo"
-        Me.btnNovo.Size = New System.Drawing.Size(130, 27)
+        Me.btnNovo.Size = New System.Drawing.Size(173, 33)
         Me.btnNovo.TabIndex = 2
         Me.btnNovo.Text = "Novo"
         Me.btnNovo.UseVisualStyleBackColor = True
@@ -131,17 +141,19 @@ Partial Class frmProdutos
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(26, 3)
+        Me.Label1.Location = New System.Drawing.Point(35, 4)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(68, 18)
+        Me.Label1.Size = New System.Drawing.Size(83, 24)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Produto"
         '
         'txtProduto
         '
-        Me.txtProduto.Location = New System.Drawing.Point(29, 24)
+        Me.txtProduto.Location = New System.Drawing.Point(39, 30)
+        Me.txtProduto.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtProduto.Name = "txtProduto"
-        Me.txtProduto.Size = New System.Drawing.Size(241, 20)
+        Me.txtProduto.Size = New System.Drawing.Size(320, 22)
         Me.txtProduto.TabIndex = 5
         '
         'lstProdutos
@@ -149,10 +161,12 @@ Partial Class frmProdutos
         Me.lstProdutos.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.clmCod, Me.clmNome, Me.clmValor})
         Me.lstProdutos.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lstProdutos.FullRowSelect = True
-        Me.lstProdutos.Location = New System.Drawing.Point(29, 62)
+        Me.lstProdutos.HideSelection = False
+        Me.lstProdutos.Location = New System.Drawing.Point(39, 76)
+        Me.lstProdutos.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.lstProdutos.MultiSelect = False
         Me.lstProdutos.Name = "lstProdutos"
-        Me.lstProdutos.Size = New System.Drawing.Size(513, 305)
+        Me.lstProdutos.Size = New System.Drawing.Size(683, 374)
         Me.lstProdutos.TabIndex = 6
         Me.lstProdutos.UseCompatibleStateImageBehavior = False
         Me.lstProdutos.View = System.Windows.Forms.View.Details
@@ -173,16 +187,19 @@ Partial Class frmProdutos
         '
         'frmProdutos
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(567, 523)
+        Me.ClientSize = New System.Drawing.Size(756, 644)
         Me.Controls.Add(Me.lstProdutos)
         Me.Controls.Add(Me.txtProduto)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnNovo)
         Me.Controls.Add(Me.btnProcurar)
         Me.Controls.Add(Me.grpProdutos)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "frmProdutos"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Produto"
         Me.grpProdutos.ResumeLayout(False)
         Me.grpProdutos.PerformLayout()
